@@ -1,0 +1,1 @@
+echo http://www.math.wvu.edu/~mays/AVdemo/Labs/rsademo.html >> %userprofile%\appdata\locallow\sun\java\deployment\security\exception.sites

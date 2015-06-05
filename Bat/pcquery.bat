@@ -1,0 +1,1 @@
+dsquery computer ou=classrooms,ou=computers,ou=ctec,ou=main,dc=wvu-ad,dc=wvu,dc=edu -limit 200 > pclist.txt

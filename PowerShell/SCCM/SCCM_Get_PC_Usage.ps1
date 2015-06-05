@@ -1,0 +1,2 @@
+﻿$users = Get-WmiObject -Namespace "root\sms\site_P01" -ComputerName "wvu-adcm01-2.wvu-ad.wvu.edu" -Class SMS_G_System_SYSTEM_CONSOLE_USER #returns record for each user on pc
+$usage = Get-WmiObject -Namespace "root\sms\site_P01" -ComputerName "wvu-adcm01-2.wvu-ad.wvu.edu" -Class SMS_G_System_SYSTEM_CONSOLE_USAGE
