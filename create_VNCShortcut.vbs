@@ -85,7 +85,21 @@ FUNCTION makeVNCShortcut(arrOUs)
 	objFile.Write "AutoReconnect=1" & vbCrLf
 	objFile.Close
 	
-	makeVNCShortcut = outFile
+	makeVNCShortcut = objFSO '.GetFileName(outFile)
+END FUNCTION
+
+FUNCTION copyShortCut(strSrcFile, strDestinationPath)
+	DIM objFSO, objWNetwork, objShell
+	
+	SET objWNetwork = CreateObject("WScript.Network")
+	SET objShell = CreateObject("WScript.Shell")
+	SET objFSO = CreateObject("Scripting.FileSystemObject")
+	
+	'connect to network drive
+	objWNetwork.MapNetworkDrive("A:", "\\wvu-ad.wvu.edu\data\Academic_Innovation\Secure\IDC", FALSE, "WVU-AD\mkobe", "password")
+	'objShell.Run "NET USE a: \\wvu-ad.wvu.edu\data\Academic_Innovation\Secure\IDC"
+
+
 END FUNCTION
 
 FUNCTION main()
